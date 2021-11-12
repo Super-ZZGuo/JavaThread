@@ -7,15 +7,23 @@ package thread;
 class MyThread implements Runnable{
 
     private int num = 10000;
+    Object object = new Object();
 
     @Override
     public void run(){
         while(true){
-            if(num > 0){
-                num--;
-                System.out.println(Thread.currentThread().getName() + "票数剩下" + num);
-            }else{
-                break;
+            synchronized (object){
+                if(num > 0){
+                    try {
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    num--;
+                    System.out.println(Thread.currentThread().getName() + "票数剩下" + num);
+                }else{
+                    break;
+                }
             }
         }
     }
