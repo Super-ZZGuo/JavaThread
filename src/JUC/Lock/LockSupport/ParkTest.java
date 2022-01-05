@@ -1,4 +1,4 @@
-package JUC.LockSupport;
+package JUC.Lock.LockSupport;
 
 import java.util.concurrent.locks.LockSupport;
 

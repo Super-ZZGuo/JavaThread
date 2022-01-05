@@ -1,4 +1,4 @@
-package JUC.Atomic.AtomicIntegerFieldUpdater;
+package JUC.Lock.Atomic.AtomicIntegerFieldUpdater;
 
 /**
  * @Author zzguo
